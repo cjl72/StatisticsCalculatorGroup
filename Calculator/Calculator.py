@@ -1,5 +1,6 @@
 from MathOperations.Addition import Addition
 from MathOperations.Subtraction import Subtraction
+from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
 
 class Calculator:
@@ -18,5 +19,9 @@ class Calculator:
 
     def multiply(self, a, b):
         self.Result = Multiplication.multiply(a, b)
+        return self.Result
+
+    def divide(self, a, b):
+        self.Result = Division.divide(a, b)
         return self.Result
 

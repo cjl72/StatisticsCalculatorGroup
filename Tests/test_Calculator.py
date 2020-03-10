@@ -18,7 +18,11 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_return_difference(self):
         result = self.calculator.subtract(2, 1)
         self.assertEqual(1, result)
-
+        
     def test_calculator_return_multiply(self):
         result = self.calculator.multiply(3, 2)
         self.assertEqual(6, result)
+    
+    def test_calculator_return_divide(self):
+        result = self.calculator.divide(10, 5)
+        self.assertEqual(2, result)
