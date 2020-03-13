@@ -5,6 +5,7 @@ from RandomGenerator.RandomList import RandomList
 from RandomGenerator.SelectItemList import SelectItemList
 from RandomGenerator.PickSeed import PickSeedList
 from RandomGenerator.SelectWithoutSeed import SelectWithoutSeed
+from RandomGenerator.SelectWithSeed import SelectWithSeed
 
 class MyTestCase(unittest.TestCase):
 
@@ -54,3 +55,8 @@ class MyTestCase(unittest.TestCase):
         lst = RandomList.listInt(0, 10, 10, 3)
         result = SelectWithoutSeed.pickItem(lst, 5)
         self.assertEqual(result, [0, 3, 5, 8, 8])
+
+    def test_PickFromListSeed(self):
+        lst = RandomList.listInt(0, 10, 10, 3)
+        result = SelectWithSeed.pickItem(3, lst, 5)
+        self.assertEqual(result, [9, 8, 9, 9, 8])
