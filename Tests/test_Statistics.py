@@ -49,7 +49,18 @@ class MyTestCase(unittest.TestCase):
         num = self.statistics.randomNoSeedDec(0, 10)
         self.assertEqual(isinstance(num, float), True)
 
-    
+    def test_RandomSeed_Int(self):
+        result = self.statistics.randomWithSeedInt(4, 0, 10)
+        result2 = self.statistics.randomWithSeedInt(4, 0, 10)
+        self.assertEqual(result, result2)
+
+    def test_RandomSeed_Dec(self):
+        result = self.statistics.randomWithSeedDec(4, 0, 10)
+        result2 = self.statistics.randomWithSeedDec(4, 0, 10)
+        self.assertEqual(result, result2)
+
+
+
 
 
 
