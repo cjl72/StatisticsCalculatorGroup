@@ -6,6 +6,7 @@ from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
 from StatisticFunctions.Quartiles import Quartiles
+from StatisticFunctions.Covariance import Covariance
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -31,4 +32,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(1, MeanDeviation.meanDeviation(self.testData))
 
     def test_StatisticFunctions_Quartiles(self):
-        self.assertEqual([1.25, 2.5, 3.5], Quartiles.quartiles(self.testData))
+        self.assertEqual([1.75, 2.5, 3.25], Quartiles.quartiles(self.testData))
+
+    def test_StatisticFunctions_Covariance(self):
+        self.assertEqual(-188.54736842105262, Covariance.covariance(self.testData, self.testData2))

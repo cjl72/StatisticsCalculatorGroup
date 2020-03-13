@@ -36,4 +36,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_Quartile_calculator(self):
         q = self.statistics.quartiles(self.testData)
-        self.assertEqual(q, [1.25, 2.5, 3.5])
+        self.assertEqual(q, [1.75, 2.5, 3.25])
+
+    def test_Covariance_calculator(self):
+        CV = self.statistics.Covariance(self.testData)
+        self.assertEqual(CV, -188.54736842105262)
+

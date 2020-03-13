@@ -37,3 +37,4 @@ class Statistics(Calculator):
     def quartiles(self, data):
         self.result = Quartiles.quartiles(data)
         return self.result
+
