@@ -8,6 +8,7 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.testData = [1, 2, 3, 4]
         self.testData2 = [1, 2, 2, 3, 4]
+        self.testData3 = [1, 2, 3, 4]
         self.statistics = Statistics()
 
     def test_instantiate_calculator(self):
@@ -38,7 +39,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(meanDev, 1)
 
     def test_PopulationCorrelation_calculator(self):
-        popCo = self.statistics.popCo(PopulationCorrelation.popCor(self.testData, self.testData2))
+        popCo = self.statistics.popCo(PopulationCorrelation.popCor(self.testData, self.testData3))
         self.assertEqual(popCo, -0.22499088742463133)
 
     def test_RandomNoSeed_Int(self):
@@ -58,6 +59,17 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.randomWithSeedDec(4, 0, 10)
         result2 = self.statistics.randomWithSeedDec(4, 0, 10)
         self.assertEqual(result, result2)
+
+    def test_RandomListInt(self):
+        result = self.statistics.randomListInt(0, 10, 5, 4)
+        self.assertEqual(result, [7, 5, 1, 8, 7])
+
+    def test_RandomListDec(self):
+        result = self.statistics.randomListDec(0, 10, 5, 4)
+        self.assertEqual(result, [9.670298390136766, 5.4723224917572235,
+                                  9.726843599648843, 7.148159936743647,
+                                  6.977288245972709])
+
 
 
 

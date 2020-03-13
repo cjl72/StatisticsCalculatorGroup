@@ -1,6 +1,7 @@
 import unittest
 from RandomGenerator.RandomNoSeed import RandomNoSeed
 from RandomGenerator.RandomWithSeed import RandomWithSeed
+from RandomGenerator.RandomList import RandomList
 
 class MyTestCase(unittest.TestCase):
 
@@ -24,3 +25,13 @@ class MyTestCase(unittest.TestCase):
         result = RandomWithSeed.randomDec(4, 0, 10)
         result2 = RandomWithSeed.randomDec(4, 0, 10)
         self.assertEqual(result, result2)
+
+    def test_RandomListInt(self):
+        result = RandomList.listInt(0, 10, 5, 4)
+        self.assertEqual(result, [7, 5, 1, 8, 7])
+
+    def test_RandomListDec(self):
+        result = RandomList.listDec(0, 10, 5, 4)
+        self.assertEqual(result, [9.670298390136766, 5.4723224917572235,
+                                  9.726843599648843, 7.148159936743647,
+                                  6.977288245972709])
