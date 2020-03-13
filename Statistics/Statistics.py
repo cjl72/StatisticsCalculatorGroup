@@ -42,3 +42,4 @@ class Statistics(Calculator):
     def skew(self, data):
         self.result = Skewness.skewness(data)
         return self.result
+
