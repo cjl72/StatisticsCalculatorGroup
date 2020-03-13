@@ -10,6 +10,7 @@ from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
 from RandomGenerator.RandomNoSeed import RandomNoSeed
 from RandomGenerator.RandomWithSeed import RandomWithSeed
+from RandomGenerator.RandomList import RandomList
 
 
 class Statistics(Calculator):
@@ -64,6 +65,14 @@ class Statistics(Calculator):
 
     def randomWithSeedDec(self, sd, a, b):
         self.result = RandomWithSeed.randomDec(sd, a, b)
+        return self.result
+
+    def randomListInt(self, a, b, lngth, sd):
+        self.result = RandomList.listInt(a, b, lngth, sd)
+        return self.result
+
+    def randomListDec(self, a, b, lngth, sd):
+        self.result = RandomList.listDec(a, b, lngth, sd)
         return self.result
 
 
