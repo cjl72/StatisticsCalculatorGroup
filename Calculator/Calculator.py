@@ -2,6 +2,7 @@ from MathOperations.Addition import Addition
 from MathOperations.Subtraction import Subtraction
 from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
+from MathOperations.Exponentiation import Exponentiation
 
 class Calculator:
     Result = 0
@@ -24,4 +25,10 @@ class Calculator:
     def divide(self, a, b):
         self.Result = Division.divide(a, b)
         return self.Result
+
+    def exponent(self, a, b):
+        self.Result = Exponentiation.exponent(a, b)
+        return self.Result
+
+
 

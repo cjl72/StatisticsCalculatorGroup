@@ -26,3 +26,8 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_return_divide(self):
         result = self.calculator.divide(10, 5)
         self.assertEqual(2, result)
+
+    def test_calculator_return_exponent(self):
+        result = self.calculator.exponent(2, 3)
+        self.assertEqual(8, result)
+
