@@ -2,6 +2,7 @@ import unittest
 from StatisticFunctions.Mean import Mean
 from StatisticFunctions.Median import Median
 from StatisticFunctions.Mode import Mode
+from StatisticFunctions.Variance import Variance
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -16,3 +17,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_StatisticFunctions_Mode(self):
         self.assertEqual(2, Mode.mode(self.testData2))
+
+    def test_StatisticFunctions_Variance(self):
+        self.assertEqual(1.25, Variance.variance(self.testData))

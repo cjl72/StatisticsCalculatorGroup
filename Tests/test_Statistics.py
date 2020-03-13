@@ -21,3 +21,7 @@ class MyTestCase(unittest.TestCase):
     def test_mode_calculator(self):
         theMode = self.statistics.mode(self.testData2)
         self.assertEqual(theMode, 2)
+
+    def test_variance_calculator(self):
+        v = self.statistics.var(self.testData)
+        self.assertEqual(v, 1.25)
