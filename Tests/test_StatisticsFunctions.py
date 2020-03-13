@@ -2,7 +2,6 @@ import unittest
 from StatisticFunctions.Mean import Mean
 from StatisticFunctions.Median import Median
 from StatisticFunctions.Mode import Mode
-from StatisticFunctions.Quartiles import Quartiles
 from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
@@ -38,10 +37,10 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(-188.54736842105262, Covariance.covariance(self.testData, self.testData2))
 
     def test_StatisticFunctions_Skewness(self):
-        self.assertEqual(0.3265989606653176, Skewness.skewness(self.testData))
+        self.assertEqual(0, Skewness.skewness(self.testData))
 
     def test_StatisticFunctions_MeanDeviation(self):
-        self.assertEqual(26.740000000000002, MeanDeviation.meanDeviation(self.testData))
+        self.assertEqual(1, MeanDeviation.meanDeviation(self.testData))
 
     def test_StatisticFunctions_PopulationCorrelation(self):
         self.assertEqual(-0.22499088742463133, PopulationCorrelation.popCor(self.testData, self.testData2))
