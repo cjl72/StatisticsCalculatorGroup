@@ -9,6 +9,7 @@ from StatisticFunctions.MeanDeviation import MeanDeviation
 from StatisticFunctions.Quartiles import Quartiles
 from StatisticFunctions.Covariance import Covariance
 from StatisticFunctions.Skewness import Skewness
+from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -35,11 +36,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_StatisticFunctions_Covariance(self):
         self.assertEqual(-188.54736842105262, Covariance.covariance(self.testData, self.testData2))
-        self.assertEqual([12.75, 27.5, 72.25], Quartiles.quartiles(self.testData))
 
     def test_StatisticFunctions_Skewness(self):
         self.assertEqual(0.3265989606653176, Skewness.skewness(self.testData))
 
     def test_StatisticFunctions_MeanDeviation(self):
         self.assertEqual(26.740000000000002, MeanDeviation.meanDeviation(self.testData))
+
+    def test_StatisticFunctions_PopulationCorrelation(self):
+        self.assertEqual(-0.22499088742463133, PopulationCorrelation.popCor(self.testData, self.testData2))
 
