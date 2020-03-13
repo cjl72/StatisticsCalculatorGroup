@@ -4,6 +4,7 @@ from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
 from MathOperations.Exponentiation import Exponentiation
 from MathOperations.Root import Root
+from MathOperations.Logarithm import Logarithm
 
 class Calculator:
     Result = 0
@@ -35,4 +36,7 @@ class Calculator:
         self.Result = Root.root(a, b)
         return self.Result
 
+    def log(self, a, b):
+        self.Result = Logarithm.log(a, b)
+        return self.Result
 
