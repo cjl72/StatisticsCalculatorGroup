@@ -1,5 +1,5 @@
-Connor Letko
-Stephanie Velez
+##Connor Letko
+##Stephanie Velez
 
 Calculator Object
 1. Properties
