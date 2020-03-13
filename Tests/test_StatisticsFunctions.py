@@ -1,5 +1,6 @@
 import unittest
 from StatisticFunctions.Mean import Mean
+from StatisticFunctions.Median import Median
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -7,3 +8,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_StatisticFunctions_Mean(self):
         self.assertEqual(2.5, Mean.mean(self.testData))
+
+    def test_StatisticFunctions_Median(self):
+        self.assertEqual(2.5, Median.median(self.testData))
