@@ -31,3 +31,8 @@ class MyTestCase(unittest.TestCase):
         result = self.calculator.exponent(2, 3)
         self.assertEqual(8, result)
 
+    def test_calculator_return_root(self):
+        result = self.calculator.root(4, 2)
+        self.assertEqual(2, result)
+
+
