@@ -4,6 +4,7 @@ from StatisticFunctions.Median import Median
 from StatisticFunctions.Mode import Mode
 from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
+from StatisticFunctions.MeanDeviation import MeanDeviation
 
 class Statistics(Calculator):
 
@@ -25,4 +26,8 @@ class Statistics(Calculator):
 
     def stdDev(self, data):
         self.result = StandardDeviation.standardDeviation(data)
+        return self.result
+
+    def meandeviation(self, data):
+        self.result = MeanDeviation.meanDeviation(data)
         return self.result

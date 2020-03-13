@@ -29,3 +29,7 @@ class MyTestCase(unittest.TestCase):
     def test_stdDev_calculator(self):
         std = self.statistics.stdDev(self.testData)
         self.assertEqual(std, 1.118033988749895)
+
+    def test_meanDeviation_calculator(self):
+        meanDev = self.statistics.meandeviation(self.testData)
+        self.assertEqual(meanDev, 1)
