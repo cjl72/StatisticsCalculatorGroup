@@ -2,6 +2,7 @@ import unittest
 from RandomGenerator.RandomNoSeed import RandomNoSeed
 from RandomGenerator.RandomWithSeed import RandomWithSeed
 from RandomGenerator.RandomList import RandomList
+from RandomGenerator.SelectItemList import SelectItemList
 
 class MyTestCase(unittest.TestCase):
 
@@ -35,3 +36,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(result, [9.670298390136766, 5.4723224917572235,
                                   9.726843599648843, 7.148159936743647,
                                   6.977288245972709])
+
+    def test_PickRandomNumber(self):
+        lst = RandomList.listInt(0, 10, 5, 4)
+        result = SelectItemList.pickItem(lst)
+        self.assertEqual(result, 7)
+
