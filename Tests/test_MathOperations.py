@@ -3,6 +3,7 @@ from MathOperations.Subtraction import Subtraction
 from MathOperations.Addition import Addition
 from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
+from MathOperations.Exponentiation import Exponentiation
 
 class MyTestCase(unittest.TestCase):
 
@@ -17,4 +18,8 @@ class MyTestCase(unittest.TestCase):
         
     def test_MathOperations_divide(self):
         self.assertEqual(2, Division.divide(10, 5))
+
+    def test_MathOperations_exponentation(self):
+        self.assertEqual(8, Exponentiation.exponent(2, 3))
+
 
