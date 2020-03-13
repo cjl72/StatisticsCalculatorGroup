@@ -10,6 +10,7 @@ from StatisticFunctions.Covariance import Covariance
 from StatisticFunctions.Skewness import Skewness
 from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
 from StatisticFunctions.SampleCorrelation import SampleCorrelation
+from StatisticFunctions.Zscore import Zscore
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -49,3 +50,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_StatisticFunctions_SampleCorrelation(self):
         self.assertEqual(1.084333414387259, SampleCorrelation.correlation(3, self.testData, self.testData3))
+
+    def test_StatisticFunctions_ZScore(self):
+        self.assertEqual(0.4472135954999579, Zscore.zscore(4, self.testData))
