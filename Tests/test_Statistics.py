@@ -41,4 +41,9 @@ class MyTestCase(unittest.TestCase):
     def test_Covariance_calculator(self):
         CV = self.statistics.Covariance(self.testData)
         self.assertEqual(CV, -188.54736842105262)
+        
+    def test_Skewness_calculator(self):
+        skew = self.statistics.skewness(self.testData)
+        self.assertEqual(skew, 0.3265989606653176)
+
 
