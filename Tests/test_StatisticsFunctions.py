@@ -9,6 +9,7 @@ from StatisticFunctions.Quartiles import Quartiles
 from StatisticFunctions.Covariance import Covariance
 from StatisticFunctions.Skewness import Skewness
 from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
+from StatisticFunctions.SampleCorrelation import SampleCorrelation
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -46,3 +47,5 @@ class MyTestCase(unittest.TestCase):
     def test_StatisticFunctions_PopulationCorrelation(self):
         self.assertEqual(1.3199326582148883, PopulationCorrelation.popCor(self.testData, self.testData3))
 
+    def test_StatisticFunctions_SampleCorrelation(self):
+        self.assertEqual(1.084333414387259, SampleCorrelation.correlation(3, self.testData, self.testData3))
