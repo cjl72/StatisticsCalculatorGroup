@@ -2,6 +2,7 @@ from Calculator.Calculator import Calculator
 from StatisticFunctions.Mean import Mean
 from StatisticFunctions.Median import Median
 from StatisticFunctions.Mode import Mode
+from StatisticFunctions.Variance import Variance
 
 class Statistics(Calculator):
 
@@ -15,4 +16,8 @@ class Statistics(Calculator):
 
     def mode(self, data):
         self.result = Mode.mode(data)
+        return self.result
+
+    def var(self, data):
+        self.result = Variance.variance(data)
         return self.result
