@@ -1,4 +1,4 @@
-import numpy as np
+import numpy
 
 
 class Covariance():
@@ -6,4 +6,4 @@ class Covariance():
 
     def covariance(a, b):
 
-        return np.cov(a, b)[0, 1]
+        return numpy.cov(a, b)[0, 1]

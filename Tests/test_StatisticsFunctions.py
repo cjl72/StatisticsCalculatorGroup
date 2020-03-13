@@ -14,6 +14,7 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.testData = [1, 2, 3, 4]
         self.testData2 = [1, 2, 2, 3, 4]
+        self.testData3 = [1, 2, 4, 5]
 
     def test_StatisticFunctions_Mean(self):
         self.assertEqual(2.5, Mean.mean(self.testData))
@@ -34,7 +35,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual([1.75, 2.5, 3.25], Quartiles.quartiles(self.testData))
 
     def test_StatisticFunctions_Covariance(self):
-        self.assertEqual(-188.54736842105262, Covariance.covariance(self.testData, self.testData2))
+        self.assertEqual(2.333333333333333, Covariance.covariance(self.testData, self.testData3))
 
     def test_StatisticFunctions_Skewness(self):
         self.assertEqual(0, Skewness.skewness(self.testData))
@@ -43,5 +44,5 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(1, MeanDeviation.meanDeviation(self.testData))
 
     def test_StatisticFunctions_PopulationCorrelation(self):
-        self.assertEqual(-0.22499088742463133, PopulationCorrelation.popCor(self.testData, self.testData2))
+        self.assertEqual(1.3199326582148883, PopulationCorrelation.popCor(self.testData, self.testData3))
 

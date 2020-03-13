@@ -9,6 +9,7 @@ from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
 from RandomGenerator.RandomNoSeed import RandomNoSeed
+from RandomGenerator.RandomWithSeed import RandomWithSeed
 
 
 class Statistics(Calculator):
@@ -56,4 +57,13 @@ class Statistics(Calculator):
     def randomNoSeedDec(self, a, b):
         self.result = RandomNoSeed.randomDec(a, b)
         return self.result
+
+    def randomWithSeedInt(self, sd, a, b):
+        self.result = RandomWithSeed.randomInt(sd, a, b)
+        return self.result
+
+    def randomWithSeedDec(self, sd, a, b):
+        self.result = RandomWithSeed.randomDec(sd, a, b)
+        return self.result
+
 
