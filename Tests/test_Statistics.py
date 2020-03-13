@@ -1,4 +1,7 @@
 import unittest
+
+from StatisticFunctions.Covariance import Covariance
+from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
 from Statistics.Statistics import Statistics
 
 class MyTestCase(unittest.TestCase):
@@ -34,16 +37,10 @@ class MyTestCase(unittest.TestCase):
         meanDev = self.statistics.meandeviation(self.testData)
         self.assertEqual(meanDev, 1)
 
-    def test_Quartile_calculator(self):
-        q = self.statistics.quartiles(self.testData)
-        self.assertEqual(q, [1.75, 2.5, 3.25])
+    def test_PopulationCorrelation_calculator(self):
+        popCo = self.statistics.popCo(PopulationCorrelation.popCor(self.testData, self.testData2))
+        self.assertEqual(popCo, -0.22499088742463133)
 
-    def test_Covariance_calculator(self):
-        CV = self.statistics.Covariance(self.testData)
-        self.assertEqual(CV, -188.54736842105262)
-        
-    def test_Skewness_calculator(self):
-        skew = self.statistics.skewness(self.testData)
-        self.assertEqual(skew, 0.3265989606653176)
+
 
 

@@ -2,6 +2,7 @@ from Calculator.Calculator import Calculator
 from StatisticFunctions.Mean import Mean
 from StatisticFunctions.Median import Median
 from StatisticFunctions.Mode import Mode
+from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
 from StatisticFunctions.Quartiles import Quartiles
 from StatisticFunctions.Skewness import Skewness
 from StatisticFunctions.Variance import Variance
@@ -41,5 +42,9 @@ class Statistics(Calculator):
 
     def skew(self, data):
         self.result = Skewness.skewness(data)
+        return self.result
+
+    def popCo(self, data):
+        self.result = PopulationCorrelation.popCor(self.testData, self.testData2)
         return self.result
 
