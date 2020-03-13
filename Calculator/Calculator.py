@@ -3,6 +3,7 @@ from MathOperations.Subtraction import Subtraction
 from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
 from MathOperations.Exponentiation import Exponentiation
+from MathOperations.Root import Root
 
 class Calculator:
     Result = 0
@@ -30,5 +31,8 @@ class Calculator:
         self.Result = Exponentiation.exponent(a, b)
         return self.Result
 
+    def root(self, a, b):
+        self.Result = Root.root(a, b)
+        return self.Result
 
 

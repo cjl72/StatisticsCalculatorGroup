@@ -4,6 +4,7 @@ from MathOperations.Addition import Addition
 from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
 from MathOperations.Exponentiation import Exponentiation
+from MathOperations.Root import Root
 
 class MyTestCase(unittest.TestCase):
 
@@ -21,5 +22,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_MathOperations_exponentation(self):
         self.assertEqual(8, Exponentiation.exponent(2, 3))
+
+    def test_MathOperations_root(self):
+        self.assertEqual(2, Root.root(4, 2))
+
 
 
