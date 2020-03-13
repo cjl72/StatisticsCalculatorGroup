@@ -33,3 +33,7 @@ class MyTestCase(unittest.TestCase):
     def test_meanDeviation_calculator(self):
         meanDev = self.statistics.meandeviation(self.testData)
         self.assertEqual(meanDev, 1)
+
+    def test_Quartile_calculator(self):
+        q = self.statistics.quartiles(self.testData)
+        self.assertEqual(q, [1.25, 2.5, 3.5])

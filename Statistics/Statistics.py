@@ -5,6 +5,8 @@ from StatisticFunctions.Mode import Mode
 from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
+from StatisticFunctions.Quartiles import Quartiles
+
 
 class Statistics(Calculator):
 
@@ -30,4 +32,8 @@ class Statistics(Calculator):
 
     def meandeviation(self, data):
         self.result = MeanDeviation.meanDeviation(data)
+        return self.result
+
+    def quartiles(self, data):
+        self.result = Quartiles.quartiles(data)
         return self.result
