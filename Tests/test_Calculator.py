@@ -35,4 +35,8 @@ class MyTestCase(unittest.TestCase):
         result = self.calculator.root(4, 2)
         self.assertEqual(2, result)
 
+    def test_calculator_return_log(self):
+        result = self.calculator.log(100, 10)
+        self.assertEqual(2, result)
+
 

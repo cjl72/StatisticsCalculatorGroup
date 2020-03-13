@@ -5,6 +5,7 @@ from MathOperations.Division import Division
 from MathOperations.Multiplication import Multiplication
 from MathOperations.Exponentiation import Exponentiation
 from MathOperations.Root import Root
+from MathOperations.Logarithm import Logarithm
 
 class MyTestCase(unittest.TestCase):
 
@@ -14,7 +15,7 @@ class MyTestCase(unittest.TestCase):
     def test_MathOperations_subtraction(self):
         self.assertEqual(1, Subtraction.difference(2, 1))
 
-   def test_MathOperations_return_Multiplication(self):
+    def test_MathOperations_return_Multiplication(self):
         self.assertEqual(6, Multiplication.multiply(3, 2))
         
     def test_MathOperations_divide(self):
@@ -25,6 +26,9 @@ class MyTestCase(unittest.TestCase):
 
     def test_MathOperations_root(self):
         self.assertEqual(2, Root.root(4, 2))
+
+    def test_MathOperations_log(self):
+        self.assertEqual(2, Logarithm.log(100, 10))
 
 
 
