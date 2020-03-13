@@ -8,6 +8,7 @@ from StatisticFunctions.Skewness import Skewness
 from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
+from RandomGenerator.RandomNoSeed import RandomNoSeed
 
 
 class Statistics(Calculator):
@@ -44,7 +45,15 @@ class Statistics(Calculator):
         self.result = Skewness.skewness(data)
         return self.result
 
-    def popCo(self, data):
-        self.result = PopulationCorrelation.popCor(self.testData, self.testData2)
+    def popCo(self, data, data2):
+        self.result = PopulationCorrelation.popCor(data, data2)
+        return self.result
+
+    def randomNoSeedInt(self, a, b):
+        self.result = RandomNoSeed.randomInt(a, b)
+        return self.result
+
+    def randomNoSeedDec(self, a, b):
+        self.result = RandomNoSeed.randomDec(a, b)
         return self.result
 

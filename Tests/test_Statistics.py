@@ -41,6 +41,16 @@ class MyTestCase(unittest.TestCase):
         popCo = self.statistics.popCo(PopulationCorrelation.popCor(self.testData, self.testData2))
         self.assertEqual(popCo, -0.22499088742463133)
 
+    def test_RandomNoSeed_Int(self):
+        num = self.statistics.randomNoSeedInt(0, 10)
+        self.assertEqual(isinstance(num, int), True)
+
+    def test_RandomNoSeed_Dec(self):
+        num = self.statistics.randomNoSeedDec(0, 10)
+        self.assertEqual(isinstance(num, float), True)
+
+    
+
 
 
 
