@@ -1,5 +1,5 @@
-##Connor Letko
-##Stephanie Velez
+# Connor Letko & Stephanie Velez
+# Statistics Calculator Group Project
 
 Calculator Object
 1. Properties
