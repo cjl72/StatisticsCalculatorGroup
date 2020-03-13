@@ -36,7 +36,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(2, result)
 
     def test_calculator_return_log(self):
-        result = self.calculator.Log(100, 10)
+        result = self.calculator.log(100, 10)
         self.assertEqual(2, result)
 
 
