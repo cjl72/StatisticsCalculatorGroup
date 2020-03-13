@@ -34,6 +34,8 @@ class MyTestCase(unittest.TestCase):
         meanDev = self.statistics.meandeviation(self.testData)
         self.assertEqual(meanDev, 1)
 
-    def test_Quartile_calculator(self):
-        q = self.statistics.quartiles(self.testData)
-        self.assertEqual(q, [1.25, 2.5, 3.5])
+    def test_skewness_calculator(self):
+        skew = self.statistics.skewness(self.testData)
+        self.assertEqual(skew, 0.3265989606653176)
+
+

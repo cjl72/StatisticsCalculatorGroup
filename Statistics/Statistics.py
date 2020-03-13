@@ -2,10 +2,11 @@ from Calculator.Calculator import Calculator
 from StatisticFunctions.Mean import Mean
 from StatisticFunctions.Median import Median
 from StatisticFunctions.Mode import Mode
+from StatisticFunctions.Quartiles import Quartiles
+from StatisticFunctions.Skewness import Skewness
 from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
-from StatisticFunctions.Quartiles import Quartiles
 
 
 class Statistics(Calculator):
@@ -34,6 +35,10 @@ class Statistics(Calculator):
         self.result = MeanDeviation.meanDeviation(data)
         return self.result
 
-    def quartiles(self, data):
+    def quart(self, data):
         self.result = Quartiles.quartiles(data)
+        return self.result
+
+    def skew(self, data):
+        self.result = Skewness.skewness(data)
         return self.result
