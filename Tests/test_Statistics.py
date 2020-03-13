@@ -25,3 +25,7 @@ class MyTestCase(unittest.TestCase):
     def test_variance_calculator(self):
         v = self.statistics.var(self.testData)
         self.assertEqual(v, 1.25)
+
+    def test_stdDev_calculator(self):
+        std = self.statistics.stdDev(self.testData)
+        self.assertEqual(std, 1.118033988749895)
