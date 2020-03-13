@@ -5,6 +5,7 @@ from StatisticFunctions.Mode import Mode
 from StatisticFunctions.Variance import Variance
 from StatisticFunctions.StandardDeviation import StandardDeviation
 from StatisticFunctions.MeanDeviation import MeanDeviation
+from StatisticFunctions.Quartiles import Quartiles
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -28,3 +29,6 @@ class MyTestCase(unittest.TestCase):
 
     def test_StatisticFunctions_MeanDeviation(self):
         self.assertEqual(1, MeanDeviation.meanDeviation(self.testData))
+
+    def test_StatisticFunctions_Quartiles(self):
+        self.assertEqual([1.25, 2.5, 3.5], Quartiles.quartiles(self.testData))
