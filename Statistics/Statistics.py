@@ -16,6 +16,9 @@ from PopSamplingFunctions.SystematicSampling import SystematicSampling
 from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
 from PopSamplingFunctions.MarginError import MarginError
 from PopSamplingFunctions.Cochran import Cochran
+from PopSamplingFunctions import SampleSizeKnown, SampleSizeUnknownPop
+
+
 class Statistics(Calculator):
 
     def mean(self, data):
@@ -96,4 +99,12 @@ class Statistics(Calculator):
 
     def test_Cochran(self, sd, data, rnge):
         self.result = Cochran.cochran(sd, data, rnge)
+        return self.result
+
+    def test_SampleSizeUnknown(self, sd, data, percentage):
+        self.result = SampleSizeUnknownPop.SampleSizeUnkownPop(sd, data, percentage)
+        return self.result
+
+    def test_SampleSizeknown(self, sd, data):
+        self.result = SampleSizeKnown.SampleSizeKnownPop(sd, data)
         return self.result
