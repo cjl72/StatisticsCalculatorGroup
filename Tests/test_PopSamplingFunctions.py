@@ -1,6 +1,7 @@
 import unittest
 from random import randint, seed
 
+from PopSamplingFunctions.Cochran import Cochran
 from PopSamplingFunctions.SimpleSampling import SimpleSampling
 from PopSamplingFunctions.SystematicSampling import SystematicSampling
 from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
@@ -31,6 +32,10 @@ class MyTestCase(unittest.TestCase):
     def test_Margin_Error(self):
         result = MarginError.marginError(self.testData, 3)
         self.assertEqual(result, -14.133333333333335)
+
+    def test_Cochran(self):
+        result = Cochran.cochran(3, self.testData, 4)
+        self.assertEqual(result, 0.0010094984628091588)
 
 
 if __name__ == '__main__':

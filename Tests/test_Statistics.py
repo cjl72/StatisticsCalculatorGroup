@@ -85,6 +85,10 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.MarginError(3, self.testData)
         self.assertEqual(result, -14.133333333333335)
 
+    def test_Cochran(self):
+        result = self.statistics.Cochran(3, self.testData, 4)
+        self.assertEqual(result, 0.0010094984628091588)
+
 
 
 

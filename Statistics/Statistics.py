@@ -15,7 +15,7 @@ from PopSamplingFunctions.SimpleSampling import SimpleSampling
 from PopSamplingFunctions.SystematicSampling import SystematicSampling
 from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
 from PopSamplingFunctions.MarginError import MarginError
-
+from PopSamplingFunctions.Cochran import Cochran
 class Statistics(Calculator):
 
     def mean(self, data):
@@ -92,4 +92,8 @@ class Statistics(Calculator):
 
     def MarginError(self, data, n):
         self.result = MarginError.marginError(data, n)
+        return self.result
+
+    def test_Cochran(self, sd, data, rnge):
+        self.result = Cochran.cochran(sd, data, rnge)
         return self.result
