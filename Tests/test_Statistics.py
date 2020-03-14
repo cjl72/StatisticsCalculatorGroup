@@ -81,6 +81,9 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.SystematicSampling(.90, self.testData)
         self.assertEqual(result, (0.8046719486285641, 3.9953280513714358))
 
+    def test_Margin_Error(self):
+        result = self.statistics.MarginError(3, self.testData)
+        self.assertEqual(result, -14.133333333333335)
 
 
 

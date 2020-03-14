@@ -14,6 +14,7 @@ from RandomGenerator.RandomList import RandomList
 from PopSamplingFunctions.SimpleSampling import SimpleSampling
 from PopSamplingFunctions.SystematicSampling import SystematicSampling
 from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
+from PopSamplingFunctions.MarginError import MarginError
 
 class Statistics(Calculator):
 
@@ -87,4 +88,8 @@ class Statistics(Calculator):
 
     def ConfidenceIntervalSample(self, conf, data, sd, higher):
         self.result = ConfidenceInterval.confidenceIntervalPop(conf, data, sd, higher)
+        return self.result
+
+    def MarginError(self, data, n):
+        self.result = MarginError.marginError(data, n)
         return self.result

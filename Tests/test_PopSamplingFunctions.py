@@ -4,7 +4,7 @@ from random import randint, seed
 from PopSamplingFunctions.SimpleSampling import SimpleSampling
 from PopSamplingFunctions.SystematicSampling import SystematicSampling
 from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
-
+from PopSamplingFunctions.MarginError import MarginError
 
 class MyTestCase(unittest.TestCase):
 
@@ -28,8 +28,9 @@ class MyTestCase(unittest.TestCase):
         result = ConfidenceInterval.confidenceInterval(.90, 1, 5, self.testData)
         self.assertEqual(result, (0.8046719486285641, 3.9953280513714358))
 
-
-
+    def test_Margin_Error(self):
+        result = MarginError.marginError(self.testData, 3)
+        self.assertEqual(result, -14.133333333333335)
 
 
 if __name__ == '__main__':
