@@ -12,6 +12,7 @@ from RandomGenerator.RandomNoSeed import RandomNoSeed
 from RandomGenerator.RandomWithSeed import RandomWithSeed
 from RandomGenerator.RandomList import RandomList
 from PopSamplingFunctions.SimpleSampling import SimpleSampling
+from PopSamplingFunctions.SystematicSampling import SystematicSampling
 
 
 class Statistics(Calculator):
@@ -78,4 +79,8 @@ class Statistics(Calculator):
 
     def SimpleSampling(self, sd, lst, rnge):
         self.result = SimpleSampling.generateSampling(sd, lst, rnge)
+        return self.result
+
+    def SystematicSampling(self, lst):
+        self.result = SystematicSampling.systematicSampling(lst)
         return self.result

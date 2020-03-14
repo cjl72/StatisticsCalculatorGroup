@@ -71,8 +71,13 @@ class MyTestCase(unittest.TestCase):
                                   6.977288245972709])
 
     def test_SimpleRandSampling(self):
-        sample = self.statistics.SimpleSampling(3, self.testData, 5)
-        self.assertEqual(sample, [3, 1, 2, 1, 1])
+        result = self.statistics.SimpleSampling(3, self.testData, 5)
+        self.assertEqual(result, [3, 1, 2, 1, 1])
+
+    def test_SystematicRandSampling(self):
+        result = self.statistics.SystematicSampling(self.testData)
+        self.assertEqual(result, [3, 21, 43, 21, 20])
+
 
 
 
