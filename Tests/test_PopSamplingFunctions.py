@@ -6,16 +6,14 @@ from PopSamplingFunctions.SimpleSampling import SimpleSampling
 from PopSamplingFunctions.SystematicSampling import SystematicSampling
 from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
 from PopSamplingFunctions.MarginError import MarginError
+from PopSamplingFunctions.SampleSizeKnown import SampleSizeKnownPop
+from PopSamplingFunctions.SampleSizeUnknownPop import SampleSizeUnkownPop
 
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.test = [1,2,3,4,5,6]
-
-    class MyTestCase(unittest.TestCase):
-        def setUp(self) -> None:
-            seed(3)
-            self.testData = randint(0, 20)
+        seed(4)
+        self.testData = randint(0, 50)
 
     def test_generate_sample(self):
         result = SimpleSampling.generateSampling(3, self.testData, 5)
@@ -36,6 +34,14 @@ class MyTestCase(unittest.TestCase):
     def test_Cochran(self):
         result = Cochran.cochran(3, self.testData, 4)
         self.assertEqual(result, 0.0010094984628091588)
+
+    def test_SampleSizeUnKnownPop(self):
+        result = SampleSizeUnkownPop.sampleSize(3, self.testData, .5)
+        self.assertEqual(result, 0.0010094984628091588)
+
+    def test_SampleSizeKnownPop(self):
+        result = SampleSizeKnownPop.sampleSize(3, self.testData)
+        self.assertEqual(result, 1.0)
 
 
 if __name__ == '__main__':
