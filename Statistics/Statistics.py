@@ -11,6 +11,7 @@ from StatisticFunctions.MeanDeviation import MeanDeviation
 from RandomGenerator.RandomNoSeed import RandomNoSeed
 from RandomGenerator.RandomWithSeed import RandomWithSeed
 from RandomGenerator.RandomList import RandomList
+from PopSamplingFunctions.SimpleSampling import SimpleSampling
 
 
 class Statistics(Calculator):
@@ -75,4 +76,6 @@ class Statistics(Calculator):
         self.result = RandomList.listDec(a, b, lngth, sd)
         return self.result
 
-
+    def SimpleSampling(self, sd, lst, rnge):
+        self.result = SimpleSampling.generateSampling(sd, lst, rnge)
+        return self.result

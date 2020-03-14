@@ -53,3 +53,4 @@ class MyTestCase(unittest.TestCase):
 
     def test_StatisticFunctions_ZScore(self):
         self.assertEqual(0.4472135954999579, Zscore.zscore(4, self.testData))
+

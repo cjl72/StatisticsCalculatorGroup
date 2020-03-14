@@ -1,8 +1,8 @@
 import unittest
 
-from StatisticFunctions.Covariance import Covariance
 from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
 from Statistics.Statistics import Statistics
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -70,7 +70,9 @@ class MyTestCase(unittest.TestCase):
                                   9.726843599648843, 7.148159936743647,
                                   6.977288245972709])
 
-
+    def test_SimpleRandSampling(self):
+        sample = self.statistics.SimpleSampling(3, self.testData, 5)
+        self.assertEqual(sample, [3, 1, 2, 1, 1])
 
 
 
