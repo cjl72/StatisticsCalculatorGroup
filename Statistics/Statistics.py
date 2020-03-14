@@ -13,7 +13,7 @@ from RandomGenerator.RandomWithSeed import RandomWithSeed
 from RandomGenerator.RandomList import RandomList
 from PopSamplingFunctions.SimpleSampling import SimpleSampling
 from PopSamplingFunctions.SystematicSampling import SystematicSampling
-
+from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
 
 class Statistics(Calculator):
 
@@ -83,4 +83,8 @@ class Statistics(Calculator):
 
     def SystematicSampling(self, lst):
         self.result = SystematicSampling.systematicSampling(lst)
+        return self.result
+
+    def ConfidenceIntervalSample(self, conf, data, sd, higher):
+        self.result = ConfidenceInterval.confidenceIntervalPop(conf, data, sd, higher)
         return self.result

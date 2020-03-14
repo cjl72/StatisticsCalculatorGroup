@@ -1,6 +1,5 @@
 import unittest
 
-from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
 from Statistics.Statistics import Statistics
 
 
@@ -78,7 +77,9 @@ class MyTestCase(unittest.TestCase):
         result = self.statistics.SystematicSampling(self.testData)
         self.assertEqual(result, [3, 21, 43, 21, 20])
 
-
+    def test_ConfidenceInterval(self):
+        result = self.statistics.SystematicSampling(.90, self.testData)
+        self.assertEqual(result, (0.8046719486285641, 3.9953280513714358))
 
 
 
